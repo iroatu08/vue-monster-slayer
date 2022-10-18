@@ -45,13 +45,16 @@ computed:{
             return {width: '0%'}
         }
         return{width: this.monsterHealth + '%'};
+
     },
+
     playerBarStyle(){
         if (this.playerHealth <0){
             return {width: '0%'}
         }
         return{width: this.playerHealth + '%'};
     },
+
     enableSpecialAttack(){
         return this.currentRound % 3 !==0
     }
