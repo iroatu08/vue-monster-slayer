@@ -9,6 +9,18 @@ html {
 body {
   margin: 0;
 }
+#game{
+  display: flex;
+  width: 100%;
+}
+
+.left-side{
+  width: 50%;
+}
+
+.right-side{
+  width: 50%;
+}
 
 header {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
@@ -62,8 +74,8 @@ section {
 
 button {
   font: inherit;
-  border: 1px solid #88005b;
-  background-color: #88005b;
+  border: 1px solid #af0a0a;
+  background-color: #af0a0a;
   color: white;
   padding: 1rem 2rem;
   border-radius: 12px;
@@ -79,8 +91,8 @@ button:focus {
 
 button:hover,
 button:active {
-  background-color: #af0a78;
-  border-color: #af0a78;
+  background-color: #c42828;
+  border-color: #c42828;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26);
 }
 
@@ -90,6 +102,15 @@ button:disabled {
   box-shadow: none;
   color: #3f3f3f;
   cursor: not-allowed;
+}
+
+.right-side{
+  min-height: 50px;
+}
+
+.right-side section {
+  height: 100vh;
+  overflow: auto;
 }
 
 #log ul {
@@ -116,4 +137,19 @@ button:disabled {
 
 .log--heal {
   color: green;
+}
+
+@media screen and (max-width: 600px) {
+  #game{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .left-side{
+    width: 100%;
+  }
+  
+  .right-side{
+    width: 100%;
+  }
 }
